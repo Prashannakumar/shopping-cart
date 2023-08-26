@@ -12,8 +12,8 @@ app.use(cors());
 app.use(bodyparser.json());
 
 var db;
-
-mongodb.connect("mongodb+srv://gopi:gopi@mycluster.csmbn.mongodb.net/shoppingcartjuly8am?retryWrites=true&w=majority", (error, database)=>{
+// var dbUri = gopi:gopi@mycluster.csmbn.mongodb.net/shoppingcartjuly8am?retryWrites=true&w=majority
+mongodb.connect("mongodb+srv:"+dbUri, (error, database)=>{
 
     if(!error)
     {
